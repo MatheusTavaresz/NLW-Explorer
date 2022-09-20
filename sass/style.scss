@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../imagens/Landing.png");
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+header{
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 32px;
+  padding-top: 32px;
+  transition: .3s;
+
+  &:hover{
+    transform: scale(1.1)
+  }
+  
+  img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, green 0%, yellow 50%, blue 100%);
+    padding: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    @media (max-width: 320px){ /*responsive*/
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 425px){ /*responsive*/
+      width: 80px;
+      height: 80px;
+    }
+
+  }
+
+  div{ /*top-Animation-config*/
+    animation: fromTop .7s 0.5s backwards;
+
+    @keyframes fromTop{ /*Animation*/
+      from{
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+
+      to{
+        opacity: 1;
+        transform: translateX(0);
+      }
+    } /*top-Animation-config*/
+
+  }
+}
+
+main{ /* box-of-elements */
+  max-width: 580px;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+
+  section{ /* sections */
+    color: white;
+    background-image: linear-gradient(90deg, green 0%, yellow 50%, blue 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    animation: fromBottom .7s 0.5s backwards;
+
+    &:nth-child(1){ /* Games-Animation */
+      animation-delay: 0;
+    }
+    &:nth-child(2){ /* Channels-Animation */
+      animation-delay: .4s;
+    }
+    &:nth-child(3){ /* Social List-Animation */
+      animation-delay: .8s;
+    }
+
+    @keyframes fromBottom{ /*Animation*/
+      from{
+        opacity: 0;
+        transform: translateX(30px);
+      }
+
+      to{
+        opacity: 1;
+        transform: translateX(0);
+      }
+    } /*Bottom-Animation-config*/
+    
+
+    div{
+      background-color: #2A2634;
+      padding: 32px;
+      padding-top: 24px;
+      border-radius: 8px;
+    }
+
+    h2{ /* title */
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.47;
+    }
+
+    p{ /* sub-title */
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: -0.10;
+      color: #A1A1AA;
+    }
+
+
+    li{ /* list elements */
+    list-style: none;
+    transition: .3s;
+
+    &:hover{
+      transform: scale(1.1)
+    }
+    }
+
+
+    ul{ /* elements in ul */
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .games-list{ /* fav game list class */  
+
+      img{ /* images in game-list */
+        width: 70px;
+        border-radius: 8px;
+
+        @media (max-width: 320px){ /*responsive*/
+          width: 30px;
+        }
+
+        @media (max-width: 425px){ /*responsive*/
+          width: 50px;
+        }
+
+      }
+    }  
+
+    .channel-list{ /* fav streamers list class */  
+    
+    img{ /* images in channel-list */ 
+      width: 70px;
+      border-radius: 50%;
+      border: 1px solid #443E54;
+
+      @media (max-width: 320px){ /*responsive*/
+        width: 30px;
+      }
+
+      @media (max-width: 425px){ /*responsive*/
+        width: 50px;
+      }
+
+
+      }
+    }
+
+    .social-list { /*social network*/
+      svg{ /* svg in social-list */ 
+      width: 40px;
+      height: auto;
+      margin-bottom: 50px;
+
+      @media (max-width: 320px){ /*responsive*/
+        width: 30px;
+      }
+      }
+
+    }
+    
+  } /* section end */ 
+} /* main end */ 
+
+
+
