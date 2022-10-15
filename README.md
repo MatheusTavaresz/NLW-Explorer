@@ -16,6 +16,5 @@ Projeto construído no evento Next Level Week da Rocketseat.
 
 ## Contato
 
-Email: mathtg2@gmail.com
-<br/>
-LinkedIn: https://www.linkedin.com/in/matheus-patrickz/
+- Email: mathtg2@gmail.com
+- LinkedIn: https://www.linkedin.com/in/matheus-patrickz/
